@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="zh">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>E-Biology</title>
+    <link rel="stylesheet" type="text/css" href="course/common-ext/styles/course.css"/>
+    <link rel="stylesheet" type="text/css" href="course/common/styles/course.css"/>
+    <script type="text/javascript" src="course/common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="course/common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="course/common-ext/scripts/netacad.js"></script>
+    <script type="text/javascript" src="course/common-ext/scripts/course.js"></script>
+    <script>
+
+      netacad.settings.init("IntroNet51");
+
+      netacad.lang.set("Module", "第 # 章");
+      netacad.lang.set("Section", "第 # 节");
+      netacad.lang.set("Topic", "主题 #");
+      netacad.lang.set("Page", "第 # 页");
+      netacad.lang.set("Figure", "图 #");
+      netacad.lang.set("Figures", "图片");
+      netacad.lang.set("NoItems", "没有项目。");
+      netacad.lang.set("NoBookmarks", "没有书签。");
+      netacad.lang.set("NoRecentPages", "没有最近访问的页面。");
+      netacad.lang.set("NoSearchResults", "没有搜索结果。");
+      netacad.lang.set("EnterSearchTerms", "输入搜索词……");
+//      netacad.lang.set("PageThumbnail", "頁碼 # 縮略圖");
+      netacad.lang.set("BackgroundImage", "背景影像");
+
+      var course = function() {
+        var c, m, s, t, p;
+        c = new netacad.models.Course("IntroNet51", "zh", "E-Biology");
+        m = new netacad.models.Module("1", "分子与细胞");
+        s = new netacad.models.Section("1.1", '细胞');
+        t = new netacad.models.Topic("1.1.1", "走进细胞");
+        p = new netacad.models.Page("1.1.1.1", "细胞的多样性与统一性", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.1.1.2", "细胞学说的建立", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        //1.2
+        s = new netacad.models.Section("1.2", "组成细胞的分子");
+        t = new netacad.models.Topic("1.2.1", "元素");
+        p = new netacad.models.Page("1.2.1.1", "组成细胞的元素", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("1.2.2", "分子");
+        p = new netacad.models.Page("1.2.2.1", "生命活动的主要承担者——蛋白质（1）", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.2.2.2", "生命活动的主要承担者——蛋白质（2）", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.2.2.3", "遗传信息的携带者——核酸", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.2.2.4", "细胞中的糖类", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.2.2.5", "细胞中的脂质", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.2.2.6", "细胞中的水", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.2.2.7", "细胞中的无机盐", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        //1.3
+        s = new netacad.models.Section("1.3", "细胞的基本结构");
+        t = new netacad.models.Topic("1.3.1", "细胞内成分");
+        p = new netacad.models.Page("1.3.1.1", "细胞膜的成分", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.3.1.2", "细胞器的功能", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.3.1.3", "生物膜的作用",  "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        //1.4
+        s = new netacad.models.Section("1.4", "细胞的物质输入与输出");
+        t = new netacad.models.Topic("1.4.1", "跨膜运输");
+        p = new netacad.models.Page("1.4.1.1", "物质的跨膜运输", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        //1.5
+        s = new netacad.models.Section("1.5", "细胞的能量供应与利用");
+        t = new netacad.models.Topic("1.5.1", "酶");
+        p = new netacad.models.Page("1.5.1.1", "降低化学反应活化能的酶", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("1.5.2", "ATP");
+        p = new netacad.models.Page("1.5.2.1", "细胞的能量通货——ATP", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("1.5.3", "细胞呼吸");
+        p = new netacad.models.Page("1.5.3.1", " ATP的主要来源——细胞的呼吸", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("1.5.4", "光合作用");
+        p = new netacad.models.Page("1.5.4.1", "能量之源——光与光合作用", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        c.appendChild(m);
+        //必修2
+        m = new netacad.models.Module("2", "遗传与进化");
+        //2.1
+        s = new netacad.models.Section("2.1", "遗传因子的发现");
+        t = new netacad.models.Topic("2.1.1", "豌豆杂交实验");
+        p = new netacad.models.Page("2.1.1.1", "孟德尔的豌豆杂交实验（一）（1）", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.1.1.2", "孟德尔的豌豆杂交实验（一）（2）", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.1.1.3", "孟德尔的豌豆杂交实验（二）（1）", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.1.1.4", "孟德尔的豌豆杂交实验（二）（2）", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        //2.2
+        s = new netacad.models.Section("2.2", "基因和染色体的关系");
+        t = new netacad.models.Topic("2.2.1", "减数分裂");
+        p = new netacad.models.Page("2.2.1.1", "精子的形成", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.2.1.2", "卵细胞的形成", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.2.1.3", "有丝分裂和减数分裂对比", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("2.2.2", "基因");
+        p = new netacad.models.Page("2.2.2.1", "基因在染色体上", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.2.2.2", "伴性遗传", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        //2.3
+        s = new netacad.models.Section("2.3", "基因的本质");
+        t = new netacad.models.Topic("2.3.1", "基因的表达");
+        p = new netacad.models.Page("2.3.1.1", "肺炎双球菌的转化实验", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.3.1.2", "噬菌体侵染细菌的实验", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.3.1.3", "DNA分子的结构及DNA的复制", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.3.1.4", "基因指导蛋白质的合成", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.3.1.5", "基因对性状的控制", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        //2.4
+        s = new netacad.models.Section("2.4", "基因突变与其他变异");
+        t = new netacad.models.Topic("2.4.1", "基因突变、基因重组、染色体变异");
+        p = new netacad.models.Page("2.4.1.1", "基因突变与诱变育种", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.4.1.2", "基因重组与基因工程", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.4.1.3", "染色体变异", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.4.1.4", "单倍体与多倍体", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.4.1.5", "人类遗传病", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        //2.5
+        s = new netacad.models.Section("2.5", "进化论");
+        t = new netacad.models.Topic("2.5.1", "现在生物进化论");
+        p = new netacad.models.Page("2.5.1.1", "现代生物进化理论的由来", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.5.1.2", "现代生物进化理论的主要内容", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        c.appendChild(m);
+        //必修3
+        m = new netacad.models.Module("3", "稳态与环境");
+        s = new netacad.models.Section("3.1", "动物和人体生命活动的调节");
+        t = new netacad.models.Topic("3.1.1", "神经调节");
+        p = new netacad.models.Page("3.1.1.1", "神经调节", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.1.1.2", "兴奋在神经纤维上的传导", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.1.1.3", "兴奋在神经元之间的传递", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.1.1.4", "神经系统的分级调节", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("3.1.2", "体液调节、激素调节");
+        p = new netacad.models.Page("3.1.2.1", "体液调节与激素调节", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.1.2.2", "神经调节与体液调节", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("3.2", "植物的激素调节");
+        t = new netacad.models.Topic("3.2.1", "植物激素");
+        p = new netacad.models.Page("3.2.1.1", "植物生长素的发现", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.2.1.2", "生长素的生理作用（1）", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.2.1.3", "生长素的生理作用（2）", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.2.1.4", "顶端优势", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.2.1.5", "其他植物激素", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.2.1.6", "植物激素之间的作用", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.2.1.7", "植物生长调节剂", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("3.3", "种群、群落、生态系统");
+        t = new netacad.models.Topic("3.3.1", "种群与群落");
+        p = new netacad.models.Page("3.3.1.1", "种群的特征", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.3.1.2", "种群数量的变化", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.3.1.3", "群落的种间关系", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.3.1.4", " 群落的结构", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.3.1.5", "群落的演替", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("3.3.2", "生态系统");
+        p = new netacad.models.Page("3.3.2.1", "生态系统概述", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.3.2.2", "生态系统的结构、能量流动及物质循环", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.3.2.3", "生态系统的自我调节能力", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.3.2.4", " 生态系统的稳定性", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.3.2.5", " 生态系统的信息传递", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        c.appendChild(m);
+        //必修4
+        m = new netacad.models.Module("4", "现代生物科技");
+        s = new netacad.models.Section("4.1", "基因");
+        t = new netacad.models.Topic("4.1.1", "基因工程");
+        p = new netacad.models.Page("4.1.1.1", " 基因工程概述", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.1.1.2", "植物基因工程", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.1.1.3", "动物基因工程", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.1.1.4", "基因工程药品及基因治疗", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        //4.2
+        s = new netacad.models.Section("4.2", "细胞");
+        t = new netacad.models.Topic("4.2.1", "植物细胞的工程、动物细胞的工程");
+        p = new netacad.models.Page("4.2.1.1", "植物克隆技术", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.2.1.2", "动物克隆技术", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.2.1.3", "植物组织培养与动物细胞培养的比较", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.2.1.4", "植物体细胞杂交与动物细胞融合的比较", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.2.1.5", "动物体细胞核移植与克隆动物", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.2.1.6", "植物组织培养", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.2.1.7", "动物细胞工程", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.2.1.8", "单克隆抗体制备", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        //4.3
+        s = new netacad.models.Section("4.3", "胚胎");
+        t = new netacad.models.Topic("4.3.1", "胚胎工程");
+        p = new netacad.models.Page("4.3.1.1", "体内受精与早期胚胎发育（1）", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.3.1.2", "体外受精与早期胚胎培养", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.3.1.3", "胚胎工程的应用及前景", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.3.1.4", "体内受精与早期胚胎发育（2）", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.3.1.5", "早期胚胎培养和胚胎移植", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.3.1.6", "胚胎工程", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.3.1.7", "胚胎干细胞（1）", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.3.1.8", "哺乳动物胚胎发育和胚胎工程", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.3.1.9", "胚胎工程的基本操作", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.3.1.10", "胚胎干细胞（2）", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        //4.4
+        s = new netacad.models.Section("4.4", "生态");
+        t = new netacad.models.Topic("4.4.1", "生态工程");
+        p = new netacad.models.Page("4.4.1.1", "生态工程概述", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.4.1.2", "生态工程所遵循的基本原理", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        c.appendChild(m);
+        //选修
+          //5.1
+        m = new netacad.models.Module("5", "高中生物实验专题");
+        s = new netacad.models.Section("5.1", "实验");
+        t = new netacad.models.Topic("5.1.1", "观察类实验");
+        p = new netacad.models.Page("5.1.1.1", "显微镜的使用", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.1.1.2", "观察DNA、RNA在细胞中的分布", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.1.1.3", "观察线粒体和叶绿体", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.1.1.4", "观察植物细胞的质壁分离和复原", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.1.1.5", "观察植物细胞的有丝分裂", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.1.1.6", "观察细胞的减数分裂", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("5.1.2", "探究性实验");
+        p = new netacad.models.Page("5.1.2.1", "探究影响酶活性的因素", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.1.2.2", "探究酵母菌的呼吸方式", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.1.2.3", "低温诱导染色体加倍", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.1.2.4", "探究植物生长调节剂对扦插枝条生根的作用", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.1.2.5", "探究培养液中酵母菌数量的动态变化", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.1.2.6", "探究水族箱（或鱼缸）中群落的演替", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("5.1.3", "鉴定类实验");
+        p = new netacad.models.Page("5.1.3.1", "生物组织中的还原糖、脂肪、蛋白质的鉴定", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.1.3.2", "叶绿体中色素的提取与分离", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.1.3.3", "DNA的粗提取与鉴定", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("5.1.4", "模拟调查类实验");
+        p = new netacad.models.Page("5.1.4.1", "模拟实验探究膜的通透性", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.1.4.2", "模拟探究细胞表面积与体积的关系", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.1.4.3", " 模拟尿糖的检测", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.1.4.4", "调查常见的人类遗传病", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.1.4.5", "土壤中动物类群丰富度的研究", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("5.1.5", "实验设计");
+        p = new netacad.models.Page("5.1.5.1", "实验设计的基础知识", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        c.appendChild(m);
+        return c;
+      }();
+
+    </script>
+  </head>
+  <body aria-live="polite">
+    <div id="login" role="document" aria-hidden="true">在访问该课程之前，请登录 <a href="http://netacad.com">netacad.com</a>。</div>
+    <div id="splash" role="document" aria-hidden="true">
+      <!--<div class="logo" title="Cisco Systems, Inc."></div>-->
+      <h1>网络简介</h1>
+      <table role="grid" aria-readonly="true">
+        <thead>
+          <tr role="row">
+            <th role="gridcell" colspan="4">单击任意图像开始课程。</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr role="row">
+            <td role="gridcell">
+              <div class="bg-0">
+                <input id="bg-0" type="image" src="course/common/backgrounds/bg-0-S.jpg" alt="背景影像"/>
+                <label id="bg-0-text" for="bg-0"></label>
+              </div>
+            </td>
+            <td role="gridcell">
+              <div class="bg-1">
+                <input id="bg-1" type="image" src="course/common/backgrounds/bg-1-S.jpg" alt="背景影像"/>
+                <label id="bg-1-text" for="bg-1"></label>
+              </div>
+            </td>
+            <td role="gridcell">
+              <div class="bg-2">
+                <input id="bg-2" type="image" src="course/common/backgrounds/bg-2-S.jpg" alt="背景影像"/>
+                <label id="bg-2-text" for="bg-2"></label>
+              </div>
+            </td>
+            <td role="gridcell">
+              <div class="bg-3">
+                <input id="bg-3" type="image" src="course/common/backgrounds/bg-3-S.jpg" alt="背景影像"/>
+                <label id="bg-3-text" for="bg-3"></label>
+              </div>
+            </td>
+          </tr>
+          <tr role="row">
+            <td role="gridcell">
+              <div class="bg-4">
+                <input id="bg-4" type="image" src="course/common/backgrounds/bg-4-S.jpg" alt="背景影像"/>
+                <label id="bg-4-text" for="bg-4"></label>
+              </div>
+            </td>
+            <td role="gridcell">
+              <div class="bg-5">
+                <input id="bg-5" type="image" src="course/common/backgrounds/bg-5-S.jpg" alt="背景影像"/>
+                <label id="bg-5-text" for="bg-5"></label>
+              </div>
+            </td>
+            <td role="gridcell">
+              <div class="bg-6">
+                <input id="bg-6" type="image" src="course/common/backgrounds/bg-6-S.jpg" alt="背景影像"/>
+                <label id="bg-6-text" for="bg-6"></label>
+              </div>
+            </td>
+            <td role="gridcell">
+              <div class="bg-7">
+                <input id="bg-7" type="image" src="course/common/backgrounds/bg-7-S.jpg" alt="背景影像"/>
+                <label id="bg-7-text" for="bg-7"></label>
+              </div>
+            </td>
+          </tr>
+          <tr role="row">
+            <td role="gridcell">
+              <div class="bg-8">
+                <input id="bg-8" type="image" src="course/common/backgrounds/bg-8-S.jpg" alt="背景影像"/>
+                <label id="bg-8-text" for="bg-8"></label>
+              </div>
+            </td>
+            <td role="gridcell">
+              <div class="bg-9">
+                <input id="bg-9" type="image" src="course/common/backgrounds/bg-9-S.jpg" alt="背景影像"/>
+                <label id="bg-9-text" for="bg-9"></label>
+              </div>
+            </td>
+            <td role="gridcell">
+              <div class="bg-10">
+                <input id="bg-10" type="image" src="course/common/backgrounds/bg-10-S.jpg" alt="背景影像"/>
+                <label id="bg-10-text" for="bg-10"></label>
+              </div>
+            </td>
+            <td role="gridcell">
+              <div class="bg-11">
+                <input id="bg-11" type="image" src="course/common/backgrounds/bg-11-S.jpg" alt="背景影像"/>
+                <label id="bg-11-text" for="bg-11"></label>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="main" role="document" aria-hidden="false">
+      <div id="header">
+        <!--<div class="logo" title="Cisco Systems, Inc."></div>-->
+        <h1><a id="course-title" href="">E-Biology</a></h1>
+      </div>
+      <div id="map" role="navigation">
+        <div class="map-container" id="map-modules" aria-live="polite">
+          <div class="scroll-pane active">
+            <button type="button" class="scroll-pane-up-button" title="向上滚动" aria-hidden="true">向上滚动</button>
+            <button type="button" class="scroll-pane-down-button" title="向下滚动" aria-hidden="true">向下滚动</button>
+            <div class="scroll-pane-content"></div>
+          </div>
+        </div>
+        <div class="map-container" id="map-sections" aria-live="polite">
+          <div class="scroll-pane">
+            <button type="button" class="scroll-pane-up-button" title="向上滚动" aria-hidden="true">向上滚动</button>
+            <button type="button" class="scroll-pane-down-button" title="向下滚动" aria-hidden="true">向下滚动</button>
+            <div class="scroll-pane-content"></div>
+          </div>
+        </div>
+        <div class="map-container" id="map-topics" aria-live="polite">
+          <div class="scroll-pane">
+            <button type="button" class="scroll-pane-up-button" title="向上滚动" aria-hidden="true">向上滚动</button>
+            <button type="button" class="scroll-pane-down-button" title="向下滚动" aria-hidden="true">向下滚动</button>
+            <div class="scroll-pane-content"></div>
+          </div>
+        </div>
+        <div class="map-container" id="map-pages" aria-live="polite">
+          <div class="scroll-pane">
+            <button type="button" class="scroll-pane-up-button" title="向上滚动" aria-hidden="true">向上滚动</button>
+            <button type="button" class="scroll-pane-down-button" title="向下滚动" aria-hidden="true">向下滚动</button>
+            <div class="scroll-pane-content"></div>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div id="container" tabindex="-1">
+          <div id="page-header">
+            <nav class="breadcrumbs" aria-label="breadcumbs">
+              <ul>
+                <li aria-level="1">
+                  <a id="breadcrumbs-module" href="#">
+                    <span id="breadcrumbs-module-li" class="breadcrumbs-header">第 # 章</span>
+                    <span id="breadcrumbs-module-title" class="breadcrumbs-title"></span>
+                  </a>
+                </li>
+                <li aria-level="2">
+                  <a id="breadcrumbs-section" href="#">
+                    <span id="breadcrumbs-section-li" class="breadcrumbs-header">第 # 节</span>
+                    <span id="breadcrumbs-section-title" class="breadcrumbs-title"></span>
+                  </a>
+                </li>
+                <li aria-level="3">
+                  <a id="breadcrumbs-topic" href="#">
+                    <span id="breadcrumbs-topic-li" class="breadcrumbs-header">主题 #</span>
+                    <span id="breadcrumbs-topic-title" class="breadcrumbs-title"></span>
+                  </a>
+                </li>
+                <li aria-level="4">
+                  <a id="breadcrumbs-page" href="#">
+                    <span id="breadcrumbs-page-li" class="breadcrumbs-header">第 # 页</span>
+                    <span id="breadcrumbs-page-title" class="breadcrumbs-title"></span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <div class="page-menu">
+              <button type="button" id="page-menu-close-button" title="关闭">
+                <span aria-hidden="true">关闭</span>
+              </button>
+            </div>
+          </div>
+          <div id="page-content" role="main" aria-live="polite"></div>
+          <div id="page-footer">
+            <fieldset id="page-slide-buttons"><legend>图片</legend></fieldset>
+            <div class="page-menu" role="menu">
+              <button type="button" id="page-menu-transcript-button" role="menuitem" title="脚本">脚本</button>
+              <button type="button" id="page-menu-bookmark-button" role="menuitem" title="书签">书签</button>
+              <button type="button" id="page-menu-previous-button" role="menuitem" title="上一个">上一个</button>
+              <button type="button" id="page-menu-next-button" role="menuitem" title="下一个">下一个</button>
+            </div>
+          </div>
+        </div>
+        <div class="overlay" id="overlay-course-index" aria-hidden="true" aria-labelledby="menu-course-index" aria-live="polite" tabindex="0">
+          <div class="overlay-header">
+            <div class="overlay-icon"></div>
+            <div class="overlay-label">课程索引</div>
+            <button type="button" class="overlay-close-button" title="关闭">
+              <span aria-hidden="true">关闭</span>
+            </button>
+          </div>
+          <div class="overlay-content">
+            <div class="overlay-container">
+              <div id="course-index-buttons" role="menu">
+                <button type="button" class="index-button" id="index-course" role="menuitem" title="课程索引">
+                  <span class="index-button-icon"></span>
+                  <span class="index-button-label">课程索引</span>
+                </button>
+                <button type="" class="index-button" id="index-packet-tracer" role="menuitem" title="Packet Tracer 索引">
+                </button>
+                <button type="button" class="index-button" id="index-lab" role="menuitem" title="实验索引">
+                </button>
+                <button type="button" class="index-button" id="index-video" role="menuitem" title="视频索引">
+                </button>
+              </div>
+              <div class="scroll-pane active">
+                <button type="button" class="scroll-pane-up-button" title="向上滚动" aria-hidden="true">向上滚动</button>
+                <button type="button" class="scroll-pane-down-button" title="向下滚动" aria-hidden="true">向下滚动</button>
+                <div class="scroll-pane-content"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="overlay" id="overlay-recent-pages" aria-hidden="true" aria-labelledby="menu-recent-pages" aria-live="polite" tabindex="0">
+          <div class="overlay-header">
+            <div class="overlay-icon"></div>
+            <div class="overlay-label">最近访问的页面</div>
+            <button type="button" class="overlay-close-button" title="关闭">
+              <span aria-hidden="true">关闭</span>
+            </button>
+          </div>
+          <div class="overlay-content">
+            <div class="overlay-container">
+              <div class="scroll-pane active">
+                <button type="button" class="scroll-pane-up-button" title="向上滚动" aria-hidden="true">向上滚动</button>
+                <button type="button" class="scroll-pane-down-button" title="向下滚动" aria-hidden="true">向下滚动</button>
+                <div class="scroll-pane-content"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="overlay" id="overlay-bookmarks" aria-hidden="true" aria-labelledby="menu-bookmarks" aria-live="polite" tabindex="0">
+          <div class="overlay-header">
+            <div class="overlay-icon"></div>
+            <div class="overlay-label">书签</div>
+            <button type="button" class="overlay-close-button" title="关闭">
+              <span aria-hidden="true">关闭</span>
+            </button>
+          </div>
+          <div class="overlay-content">
+            <div class="overlay-container">
+              <div class="scroll-pane active">
+                <button type="button" class="scroll-pane-up-button" title="向上滚动" aria-hidden="true">向上滚动</button>
+                <button type="button" class="scroll-pane-down-button" title="向下滚动" aria-hidden="true">向下滚动</button>
+                <div class="scroll-pane-content"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="overlay" id="overlay-backgrounds" aria-hidden="true" aria-labelledby="menu-backgrounds" aria-live="polite" tabindex="0">
+          <div class="overlay-header">
+            <div class="overlay-icon"></div>
+            <div class="overlay-label">选择背景</div>
+            <button type="button" class="overlay-close-button" title="关闭">
+              <span aria-hidden="true">关闭</span>
+            </button>
+          </div>
+          <div class="overlay-content">
+            <div class="overlay-container">
+              <div class="scroll-pane active">
+                <button type="button" class="scroll-pane-up-button" title="向上滚动" aria-hidden="true">向上滚动</button>
+                <button type="button" class="scroll-pane-down-button" title="向下滚动" aria-hidden="true">向下滚动</button>
+                <div class="scroll-pane-content"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="overlay" id="overlay-search" aria-hidden="true" aria-labelledby="menu-search" aria-live="polite" tabindex="0">
+          <div class="overlay-header">
+            <div class="overlay-icon"></div>
+            <div class="overlay-label">搜索</div>
+            <button type="button" class="overlay-close-button" title="关闭">
+              <span aria-hidden="true">关闭</span>
+            </button>
+            <input id="search-input" type="search"/>
+          </div>
+          <div class="overlay-content">
+            <div class="overlay-container">
+              <div class="scroll-pane active">
+                <button type="button" class="scroll-pane-up-button" title="向上滚动" aria-hidden="true">向上滚动</button>
+                <button type="button" class="scroll-pane-down-button" title="向下滚动" aria-hidden="true">向下滚动</button>
+                <div class="scroll-pane-content"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="overlay" id="overlay-languages" aria-hidden="true" aria-labelledby="menu-languages" aria-live="polite" tabindex="0">
+          <div class="overlay-header">
+            <div class="overlay-icon"></div>
+            <div class="overlay-label">语言</div>
+            <button type="button" class="overlay-close-button" title="关闭">
+              <span aria-hidden="true">关闭</span>
+            </button>
+          </div>
+          <div class="overlay-content">
+            <div class="overlay-container">
+              <div class="scroll-pane active">
+                <button type="button" class="scroll-pane-up-button" title="向上滚动" aria-hidden="true">向上滚动</button>
+                <button type="button" class="scroll-pane-down-button" title="向下滚动" aria-hidden="true">向下滚动</button>
+                <div class="scroll-pane-content">
+                  <p>选择课程语言：</p>
+                  <ul>
+                    <li><a href="#" data-lang="ar" lang="ar" title="العربية (Arabic)" >العربية</a></li>
+                    <li><a href="#" data-lang="de" name="de" lang="de" title="Deutsch (German)">Deutsch</a></li>
+                    <li><a href="#" data-lang="en" name="en" lang="en" title="English (English)">English</a></li>
+                    <li><a href="#" data-lang="es" lang="es" title="Español (Spanish)">Español</a></li>
+                    <li><a href="#" data-lang="fr" lang="fr" title="Français (French)">Français</a></li>
+                    <li><a href="#" data-lang="he" lang="he" title="עברית (Hebrew)">עברית</a></li>
+                    <li><a href="#" data-lang="hr" lang="hr" title="Hrvatski (Croatian)">Hrvatski</a></li>
+                    <li><a href="#" data-lang="hu" lang="hu" title="Magyar (Hungarian)">Magyar</a></li>
+                    <li><a href="#" data-lang="hy" lang="hy" title="Հայերեն (Armenian)">Հայերեն</a></li>
+                    <li><a href="#" data-lang="it" lang="it" title="Italiano (Italian)">Italiano</a></li>
+                    <li><a href="#" data-lang="jp" lang="ja" title="日本語 (Japanese)">日本語</a></li>
+                    <li><a href="#" data-lang="ka" lang="ka" title="ქართული (Georgian)">ქართული</a></li>
+                    <li><a href="#" data-lang="ko" lang="ko" title="한국어 (Korean)">한국어</a></li>
+                    <li><a href="#" data-lang="nl" lang="nl" title="Nederlands (Dutch)">Nederlands</a></li>
+                    <li><a href="#" data-lang="pl" lang="pl" title="Polski (Polish)">Polski</a></li>
+                    <li><a href="#" data-lang="pt" lang="pt" title="Português (Portuguese)">Português</a></li>
+                    <li><a href="#" data-lang="ro" lang="ro" title="Română (Romanian)">Română</a></li>
+                    <li><a href="#" data-lang="ru" lang="ru" title="Русский (Russian)">Русский</a></li>
+                    <li><a href="#" data-lang="tr" lang="tr" title="Türkçe (Turkish)">Türkçe</a></li>
+                    <li><a href="#" data-lang="uk" lang="uk" title="Українська (Ukrainian)">Українська</a></li>
+                    <li><a href="#" data-lang="zh" lang="zh-Hans" title="简体中文 (Simplified Chinese)">简体中文</a></li>
+                    <li><a href="#" data-lang="ch" lang="zh-Hant" title="繁體中文 (Traditional Chinese)">繁體中文</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="overlay" id="overlay-help" aria-hidden="true" aria-labelledby="menu-help" aria-live="polite" tabindex="0">
+          <div class="overlay-header">
+            <div class="overlay-icon"></div>
+            <div class="overlay-label">帮助</div>
+            <button type="button" class="overlay-close-button" title="关闭">
+              <span aria-hidden="true">关闭</span>
+            </button>
+          </div>
+          <div class="overlay-content">
+            <div class="overlay-container">
+              <div id="help-buttons" role="menu">
+                <button type="button" class="help-button" id="help-1" role="menuitem" title="简介">
+                  <span class="help-button-icon"></span>
+                  <span class="help-button-label">简介</span>
+                </button>
+                <button type="button" class="help-button" id="help-2" role="menuitem" title="课程导航">
+                </button>
+                <button type="button" class="help-button" id="help-3" role="menuitem" title="评估和证书">
+                </button>
+                <button type="button" class="help-button" id="help-4" role="menuitem" title="Packet Tracer – 安装教程">
+                </button>
+                <button type="button" class="help-button" id="help-5" role="menuitem" title="Packet Tracer – 导航教程">
+                </button>
+                <div class="help-button" role="menuitem" title="在 Facebook 上关注我们">
+                  <a href="" target="facebook-netacad">
+                    <div class="help-facebook-icon">作者</div>
+                    <div class="help-button-label">排尔哈提·亚生，刘晨阳</div>
+                  </a>
+                </div>
+              </div>
+              <div id="help-content" tabindex="-1"></div>
+            </div>
+          </div>
+        </div>
+        <div class="overlay" id="overlay-developer" aria-hidden="true" aria-labelledby="menu-developer" aria-live="polite" tabindex="0">
+          <div class="overlay-header">
+            <div class="overlay-icon"></div>
+            <div class="overlay-label">Developer Tools</div>
+            <button type="button" class="overlay-close-button" title="关闭">
+              <span aria-hidden="true">关闭</span>
+            </button>
+          </div>
+          <div class="overlay-content">
+            <div class="overlay-container">
+              <ul class="items">
+                <li><button id="clear-local-storage-button">Clear Local Storage</button></li>
+                <li><button id="clear-background-button">Clear Background</button></li>
+                <li>
+                  <button id="enable-pseudolocalization-button">Enable Pseudolocalization</button>
+                  <button id="disable-pseudolocalization-button">Disable Pseudolocalization</button>
+                </li>
+                <li><button id="disable-developer-tools-button">Disable Developer Tools</button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="menu" role="menu">
+        <div class="menu-buttons">
+          <button type="button" class="menu-button" role="menuitem" id="menu-developer" title="Developer Tools" aria-haspopup="true">
+            <span class="menu-button-icon"></span>
+            <span class="menu-button-box">
+              <span class="menu-button-label">Developer Tools</span>
+            </span>
+          </button>
+          <button type="button" class="menu-button" role="menuitem" id="menu-recent-pages" title="最近访问的页面" aria-haspopup="true">
+            <span class="menu-button-icon"></span>
+            <span class="menu-button-box">
+              <span class="menu-button-label">最近访问的页面</span>
+            </span>
+          </button>
+          <button type="button" class="menu-button" role="menuitem" id="menu-bookmarks" title="书签" aria-haspopup="true">
+            <span class="menu-button-icon"></span>
+            <span class="menu-button-box">
+              <span class="menu-button-label">书签</span>
+            </span>
+          </button>
+          <button type="button" class="menu-button" role="menuitem" id="menu-course-index" title="课程索引" aria-haspopup="true">
+            <span class="menu-button-icon"></span>
+            <span class="menu-button-box">
+              <span class="menu-button-label">课程索引</span>
+            </span>
+          </button>
+          <button type="button" class="menu-button" role="menuitem" id="menu-search" title="搜索" aria-haspopup="true">
+            <span class="menu-button-icon"></span>
+            <span class="menu-button-box">
+              <span class="menu-button-label">搜索</span>
+            </span>
+          </button>
+          <button type="button" class="menu-button" role="menuitem" id="menu-languages" title="语言" aria-haspopup="true">
+            <span class="menu-button-icon"></span>
+            <span class="menu-button-box">
+              <span class="menu-button-label">语言</span>
+            </span>
+          </button>
+          <button type="button" class="menu-button" role="menuitem" id="menu-backgrounds" title="选择背景" aria-haspopup="true">
+            <span class="menu-button-icon"></span>
+            <span class="menu-button-box">
+              <span class="menu-button-label">选择背景</span>
+            </span>
+          </button>
+          <button type="button" class="menu-button" role="menuitem" id="menu-help" title="帮助" aria-haspopup="true">
+            <span class="menu-button-icon"></span>
+            <span class="menu-button-box">
+              <span class="menu-button-label">帮助</span>
+            </span>
+          </button>
+          <button type="button" class="menu-button" role="menuitem" id="menu-return" title="返回课程">
+            <span class="menu-button-icon"></span>
+            <span class="menu-button-box">
+              <span class="menu-button-label">返回课程</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
